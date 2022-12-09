@@ -1,4 +1,4 @@
-$background: #a1a1a1;
+$nav_background: #525252;
 $width: 100vw;
 $height: 70px;
 
@@ -10,7 +10,7 @@ $links_width: 30vw;
 #navbar{
     width:$width;
     height:$height;
-    background-color:$background;
+    background-color:$nav_background;
     position:fixed;
     top:0;
     overflow:hidden;
@@ -20,6 +20,8 @@ $links_width: 30vw;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+
+    //animation: start_animation 1.5s ease-in;
 };
 
 #nav_links{
@@ -42,4 +44,9 @@ $links_width: 30vw;
 #nav_logo {
     width: $logo_width;
     height: $logo_height;
+}
+
+@keyframes start_animation{
+    from {opacity: 0; margin-bottom: -70px;}
+    to {opacity: 1; margin-bottom: 0px;}
 }

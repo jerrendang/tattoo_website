@@ -1,8 +1,36 @@
-$background: #303030;
+$background: #909090;
+$logo_height: 100vh; //width: .75 and height: 1
+$logo_width: 75vh;
 
 #home {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     background-color: $background;
-
+    display: flex;
+    justify-content: center;
 };
+
+@mixin logo_prop{
+    height: $logo_height;
+    width: $logo_width;
+    transform: rotate(90deg);
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+}
+
+@keyframes start_animation{
+    from {opacity: 0; margin-top: 0px;}
+    to {opactiy: 1; margin-top: 15px;}
+}
+
+.dormant{
+    @include logo_prop;
+    opacity: 0;
+}
+
+.start_up{
+    @include logo_prop;
+    animation: start_animation 3s ease-in;
+    opacity: 1;
+}
