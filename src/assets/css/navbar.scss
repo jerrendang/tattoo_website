@@ -1,0 +1,45 @@
+$background: #a1a1a1;
+$width: 100vw;
+$height: 70px;
+
+$logo_height: 116px;
+$logo_width: 87px; //width: .75 and height: 1
+
+$links_width: 30vw;
+
+#navbar{
+    width:$width;
+    height:$height;
+    background-color:$background;
+    position:fixed;
+    top:0;
+    overflow:hidden;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+};
+
+#nav_links{
+    width: $links_width;
+    height: $height;
+    margin-right: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    width: $logo_width;
+    height: $logo_height;
+    transform: rotate(90deg);
+};
+
+#nav_logo {
+    width: $logo_width;
+    height: $logo_height;
+}
